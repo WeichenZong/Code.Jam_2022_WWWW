@@ -14,6 +14,7 @@ function App() {
     <Router>
     <div className='App'>
       <Routes>
+      <Route path = "/result" element={<Result/>} />
       <Route path = "/" element={<Question/>} />
       </Routes> 
     </div>

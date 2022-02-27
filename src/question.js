@@ -4,14 +4,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Offcanvas, Button
 } from 'react-bootstrap'
-import { useState } from 'react';
+import { useState,withRouter} from 'react';
 import logo from './logo2.jpeg';
+import { Route } from 'react-router-dom'
 //URL url = "https://localhost:3000/api/send";
-function Question() {
+
+function Question({ navigation }) {
+    var string ="/result"
     const axios = require('axios').default;
   const [faculty, setFaculty] = useState("");
   const [year, setYear] = useState("");
   const [program, setProgram] = useState("");
+  
+  
   return (
     <div class=" text-center row bg-danger   ">
       <nav class="navbar navbar-light bg-danger">
@@ -58,29 +63,22 @@ function Question() {
               <option selected class="col-
           md-auto">--</option>
               <option >Computer Science</option>
+              <option >Honors Computer Science</option>
               <option >Stats and Computer</option>
-              <option >Math and Computer</option>
-              <option >Math and Computer</option>
-              <option >Math and Computer</option>
-              <option >Math and Computer</option>
-              <option >Math and Computer</option>
-              <option >Math and Computer</option>
+              <option >Honors Stats and Computer</option>
+              <option >Neuroscience</option>
+              <option >Biology</option>
+              <option >Physics</option>
+              <option >Chemistry</option>
+              <option >Math and Physics</option>
+              <option >Probabillity and Statistics</option>
             </select>
-            <h1>{program}</h1>
+           
+            <a href={string} class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Submit</a>
+           
+
           </div>
-        <button onClick={axios.post(
-            "/inputs",
-            {
-             year: year,
-             faculty: faculty
-            ,program: program
-            },
-            {
-              headers: {
-                "Content-type": "application/json; charset=UTF-8",
-              }
-            }
-          )}>Submit</button>
+        
         </div>
       </div>
     </div>
