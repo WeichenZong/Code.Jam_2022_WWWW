@@ -7,12 +7,25 @@ import { useState } from 'react';
 function App() {
 const [faculty ,setFaculty] = useState();
   return (
-    <div className='App'  >
-        <div className='bg-image mx-auto my-auto'>
-        <img src="https://www.educads.com/files/universities/canada/mcgill_university.png"  ></img>
-        </div>
-        <div>
-        <div className=' mx-auto justify-content-md-center col-lg-5'>
+    <div class=" w-100 h-100 text-center row bg-danger   ">
+    
+    <nav class="navbar navbar-light bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"/>
+      Bootstrap
+    </a>
+  </div>
+</nav>
+   
+
+       <div class= "no-repeat position-absolute top-50 start-50 translate-middle  "style={{ 
+        backgroundImage: 'url("https://www.educads.com/files/universities/canada/mcgill_university.png")'
+        ,backgroundRepeat:'no-repeat'
+        } } >
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  
+      <div className=' mx-auto mb-5 justify-content-md-center col-lg-5'>
         <h3 class="user-select-auto">Please select your starting year</h3>
       <select class="form-select form-select-sm mb-5" aria-label=".form-select-lg example">
         <option selected class="col-md-auto">--</option>
@@ -20,6 +33,7 @@ const [faculty ,setFaculty] = useState();
        <option value="2">U1</option>
       </select>
       </div>
+
       <div className=' mx-auto justify-content-md-center col-lg-5'>
       <h3>Please select your faculty </h3>
       <select class="form-select form-select-sm mb-5 " aria-label=".form-select-lg example">
@@ -33,8 +47,9 @@ const [faculty ,setFaculty] = useState();
        <option value="6">Schulich School of Music</option>
       </select>
       </div>
-     
-      <p class="user-select-auto">Please select your major</p>
+
+      <div className=' mx-auto justify-content-md-center col-lg-5'>
+      <h3>Please select your faculty </h3>
       <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
         <option selected class="col-
         md-auto">--</option>
@@ -43,8 +58,10 @@ const [faculty ,setFaculty] = useState();
        <option value="3">Math and Computer</option>
       </select>
         </div>
+
     </div>
-     
+    </div>
+    </div>
     
     
    
